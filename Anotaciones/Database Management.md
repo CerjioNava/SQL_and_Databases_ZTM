@@ -883,7 +883,7 @@ Para mantener la integridad de una base de datos, TODAS las transacciones deben 
 
 ACID refiere a: ATOMICITY, CONSISTENCY, ISOLATION y DURABILITY.
 
-   * ATOMICITY:   O ejectutas la totalidad de la transacción o nada.
+   * ATOMICITY:   O ejecutas la totalidad de la transacción o nada.
    * CONSISTENCY: Cada transacción debe dejar a la base de datos en un "estado de consistencia" (Commit o Rollback).
    * ISOLATION:   Las transacciones deben ser ejecutadas aisladas de otras transacciones.
    * DURABILITY:  Luego de completar la transacción, los cambios en la base de datos deben persistir. Esta hecho.

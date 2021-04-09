@@ -8,7 +8,7 @@
    - LOGICAL OPERATORS (AND, OR, NOT)
    - IS (NULL, NOT NULL, TRUE, FALSE), COALESCE
    - THREE VALUED LOGIC
-   - BETWEEN AND
+   - BETWEEN x AND y
    - IN
    - LIKE & ILIKE
    - DATES & TIMEZONES (timestamps, date operators and functions, AGE, EXTRACT, DATE_TRUNC)
