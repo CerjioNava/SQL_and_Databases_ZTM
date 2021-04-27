@@ -1,4 +1,20 @@
 
+# SQL & DATABASE FUNDAMENTALS
+
+# SUMMARY:
+
+   - DATABASES DEFINITION (DBMS, RDBMS, SQL)
+   - TYPES OF DATABASES
+   - QUERY BREAKDOWN
+   - IMPERATIVE VS DECLARATIVE LANGUAGE
+   - SQL STANDARDS
+   - DATABASE MODELS
+   - DBMS (CRUD OPERATION)
+   - RDBMS (TERMS AND 13 RULES)
+   - OLTP VS OLAP
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
 ## DATABASES
 
 > Un DataBase es un sistema (Hardware y Software) que permite al usuario almacenar, organizar y utilizar data.
@@ -149,14 +165,10 @@ Se trata de un DBMS especializado en Relational Models, y posee 13 reglas de uso
 
    		Cada tabla tiene un nombre, que debe relacionarse con la data que se almacena en dicha tabla.
 
-   * Column
+   * Column/Attribute
 
    		Cada columna representa un tipo de dato específico. 
    		
-   * Attribute
-   
-   		Es otra forma de referirse a columnas.
-
    * Degree
 
    		Un Degree (de una relación) es una colección de columnas.
@@ -174,20 +186,56 @@ Se trata de un DBMS especializado en Relational Models, y posee 13 reglas de uso
 
    		Es una colección de filas/tuplas.
 
-   * Primary Key
+   * Relation Schema
 
-   		Es lo que identifica de manera "única" a cada fila de una tabla. Se ubica al inicio de la fila. 
-   		No puede ser eliminada.	Por ejemplo: un ID.
-
-   * Foreign Key
-
- 		   Hace referencia al Primary Key de otra tabla, permitiendo que se forje una relación entre la data.
+         Refiere al Table Schema, una representación de la data que se almacenará a la tabla. 
+         Por ejemplo: En la tabla se almacenará "id, first_name, last_name, sex, date_of_birth, etc...".
 
    * Relation Instance
 
+         Refiere al set de data relacionada al Relation Schema. 
+         Es decir, todas las filas que conforman toda la data en la tabla.
+
    * Relation Key
 
-   * Relation Schema
+         Tiene como propósito identificar de manera "única" cada fila en un dataset y la relación.
+         Una vez que se decide cual es la Relation Key, se le llama Primary Key.
+         Por ejemplo: ID único para cada fila. Un email único para cada usuario.
+
+   * Super Key
+
+         Es cualquier combinación de atributos que pueden identificar de manera "única" una fila.
+         Por ejemplo: ID junto al primer nombre, ID junto al email, etc.
+
+   * Candidate Key
+
+         Es la mínima cantidad de atributos necesarios para identificar de manera "única" una fila.
+         Por ejemplo: ID y Email son candidate keys (juntos o por separados). 
+         Luego de tener el Key que identifica de manera "unica" a la fila, se le llamará Primary Key.
+
+   * Primary Key
+
+         Es lo que identifica de manera "única" a cada fila de una tabla. Se ubica al inicio de la fila. 
+         Se escoge (en lo posible) una sola Primary Key para simplificar el diseño de la base de datos.
+         No puede ser eliminada. Por ejemplo: un ID.
+
+   * Foreign Key
+
+         Hace referencia desde una tabla al Primary Key de otra tabla, permitiendo que se forje una relación entre la data.
+         Por ejemplo: En una tabla tengo "manager_id" como foreign key, relacionandose con la primary key "manager_id" de otra tabla.
+         La data de una Foreign Key debe coincidir con la data de la Primary Key de la tabla a la que hace referencia.
+
+   * Compound Key
+
+         Utiliza multiples columnas para identificar de manera "única" una fila, utilizando a su vez una "Foreign Key".
+
+   * Composite Key
+
+         Se forman con multiples columnas para identificar de manera "única" una fila, sin utilizar una "Foreign Key".
+
+   * Surrogate Key
+
+         Es una Primary Key pero que no tiene nada que ver con la data individual de cada columna.
 
 Ejemplos: 
 
